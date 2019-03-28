@@ -1,29 +1,58 @@
-//creating a path from friends.js to apiRoutes.js by importing friends.js
-var friends = require('../data/friends');
-
-
+// linking routes to data/friends
+var surveyData = require("../data/friends.js");
 
 module.exports = function(app) {
-
-    app.get('/api/friends',function(req,res) {
-        res.json(friends);
+  var scoreArray = [];
+  var lastArray = [];
+  
+    app.get("/api/friends", function(req, res) {
+      res.json(surveyData);
     });
+  
+    app.post("/api/friends", function(req, res) {
 
-    app.post('/api/friends',function(req,res) {
-        //the comparison(bring in code from survey.html)
-        //matchmaker logic
-        //set up a variable to capture best match
-        //loop through all the total differences
-        //for every score if it is less than or equal to 0 
-        //set that index to best match
-        //final answer = friends[bestmatch]
-        if(friends.length < 10 ) {
-            friends.push(req.body);
-            res.json(true);
-        } 
-        else {
-            friends.push(req.body);
-            res.json(false);
-        }     
-    });
-};
+      var masterLead = (inArr) =>{
+        lastArray.push(inArr.pop());
+        lastArray.forEach(item => {
+            lastScore = (item.scores).map(Number) ;
+            var sumOf = lastScore.reduce((acc, cur) => {return acc + cur}, 0)
+            var lastEntrySum = sumOf;
+            secGuy(inArr, lastEntrySum)
+        });
+      };
+      
+      var secGuy = (inSecArr, inOperator) =>{
+        var firstOperator = true;
+        var operator = inOperator;
+        var currentOperator = 0;
+        inSecArr.forEach(element => {
+            scoreArray = (element.scores).map(Number);
+            objName = element.name;
+            objImg = element.photo;
+            var sumArrayAll = scoreArray.reduce((acc, cur) => {return acc + cur}, 0)  
+            var compare = Math.abs(sumArrayAll - operator);
+            if (firstOperator === true){
+                currentOperator = compare;
+                firstOperator = false;
+            }
+            if (compare <= currentOperator){
+                currentOperator = compare;
+                winner = sumArrayAll;
+                winnerName = objName;
+                winnerImg = objImg;
+            }
+            else {return true}
+        });
+        res.json({name: winnerName, photo: winnerImg})
+    };
+
+    if (surveyData) {
+      surveyData.push(req.body);
+      //res.json(surveyData);
+      var newArray = surveyData.slice();
+      masterLead(newArray);
+    }
+
+  });
+  
+  };

@@ -1,276 +1,236 @@
-<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Survey</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>FriendsFinder</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+      <body background="cubes.png"></body>
 
-</head>
-</head>
-
+  </head>
 <body>
+      
+<div class="container">
+  <div class="row">
+    <br><br>
+    <div class="col-md-4 col-md-offset-4 text-center">
+      <a href="/home"><button class="btn btn-lg btn-primary"><span class="fa fa-home"></span>Home</button></a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Survey </h2>
+      <hr>
+      <h3><strong>Your Profile</strong></h3><br>
+      <h4>Name (Required)</h4>
+      <input type="text" id="name" class="form-control" required="" placeholder="First/Last">
+      <h4>Link to Photo Image (Required)</h4>
+      <input type="text" id="photo" class="form-control" required="" placeholder="Image URL">
+      <hr>
+      <h3><strong>Question 1</strong></h3>
+      <h4>You love to eat </h4>
+      <select class="selectpicker chosen-select" id="q1">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 2</strong></h3>
+      <h4>You love animals</h4>
+      <select class="selectpicker chosen-select" id="q2">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 3</strong></h3>
+      <h4>Your love watching tv</h4>
+      <select class="selectpicker chosen-select" id="q3">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 4</strong></h3>
+      <h4>Your favorite food is bandeja paisa</h4>
+      <select class="selectpicker chosen-select" id="q4">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 5</strong></h3>
+      <h4>You love traveling</h4>
+      <select class="selectpicker chosen-select" id="q5">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 6</strong></h3>
+      <h4>You hate cats</h4>
+      <select class="selectpicker chosen-select" id="q6">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 7</strong></h3>
+      <h4>Your name is Maria/Fernanda/Anjoli</h4>
+      <select class="selectpicker chosen-select" id="q7">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 8</strong></h3>
+      <h4>You love dogs</h4>
+      <select class="selectpicker chosen-select" id="q8">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 9</strong></h3>
+      <h4>You had class today</h4>
+      <select class="selectpicker chosen-select" id="q9">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <h3><strong>Question 10</strong></h3>
+      <h4>You love rainbows</h4>
+      <select class="selectpicker chosen-select" id="q10">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+      </select>
+      <br>
+      <br>
+<!-- Submit Button -->
+      <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit</button>
+    </div>
+</div>
+    <hr>
+    <footer class="footer">
+      <div class="container">
+        <p> <a href="https://github.com/mzzarate/friendsfinder">GitHub Repo</a></p>
+      </div>
+    </footer>
+  </div>
+  <!-- Modal -->
+  <div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
 
-    <div class='container'>
-        <h3>Survey Questions</h3>
-        <hr>
-        <h4>About You</h4>
-
-        <form>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Name (Required)</label>
-                <input type="text" class="form-control" id="name" placeholder="Name">
-                <label for="exampleFormControlInput1">Link to Photo Image (Required)</label>
-                <input type="text" class="form-control" id="photo" placeholder="Link to Photo Image">
-                <hr>
-            </div>
-        </form>
-
-        <h4>Question 1</h4>
-        <h5>You are a conservative driver.</h5>
-        <select class="custom-select custom-select-sm option" id='1'>
-            <option selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value='4'>4</option>
-            <option value='5'>5 (Strongly Agree)</option>
-        </select>
-
-        <br><br>
-
-        <h4>Question 2</h4>
-        <h5>Road rage does not affect you.</h5>
-        <select class="custom-select custom-select-sm option" id='2'>
-            <option selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value='4'>4</option>
-            <option value='5'>5 (Strongly Agree)</option>
-        </select>
-
-        <br><br>
-
-        <h4>Question 3</h4>
-        <h5>You like to switch lanes and make turns without using your signals.</h5>
-        <select class="custom-select custom-select-sm option" id='3'>
-            <option selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value='4'>4</option>
-            <option value='5'>5 (Strongly Agree)</option>
-        </select>
-
-        <br><br>
-
-        <h4>Question 4</h4>
-        <h5>Cant drive without listening to music.</h5>
-        <select class="custom-select custom-select-sm option" id='4'>
-            <option selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value='4'>4</option>
-            <option value='5'>5 (Strongly Agree)</option>
-        </select>
-
-        <br><br>
-
-        <h4>Question 5</h4>
-        <h5>Putting on your seatbelt is crucial before you start driving.</h5>
-        <select class="custom-select custom-select-sm option" id='5'>
-            <option selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value='4'>4</option>
-            <option value='5'>5 (Strongly Agree)</option>
-        </select>
-
-        <br><br>
-
-        <h4>Question 6</h4>
-        <h5>Prefer driving manual over automatic.</h5>
-        <select class="custom-select custom-select-sm option" id='6'>
-            <option selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value='4'>4</option>
-            <option value='5'>5 (Strongly Agree)</option>
-        </select>
-
-        <br><br>
-
-        <h4>Question 7</h4>
-        <h5>Prefer a turbocharged engine over a supercharged engine.</h5>
-        <select class="custom-select custom-select-sm option" id='7'>
-            <option selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value='4'>4</option>
-            <option value='5'>5 (Strongly Agree)</option>
-        </select>
-
-        <br><br>
-
-        <h4>Question 8</h4>
-        <h5>Fuel economy and reliabilty is more important to you than speed and performance.</h5>
-        <select class="custom-select custom-select-sm option" id='8' '>
-            <option selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value=' 4'>4</option>
-            <option value='5'>5 (Strongly Agree)</option>
-        </select>
-
-        <br><br>
-
-        <h4>Question 9</h4>
-        <h5>Prefer import over domestic vehicles.</h5>
-        <select class="custom-select custom-select-sm option" id='9'>
-            <option selected>Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value='4'>4</option>
-            <option value='5'>5 (Strongly Agree)</option>
-        </select>
-
-        <br><br>
-
-        <h4>Question 10</h4>
-        <h5>You keep up with the routine maintenance of your vehicle.</h5>
-        <select class="custom-select custom-select-sm option" id='10'>
-            <option>Select an Option</option>
-            <option value="1">1</option>1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value='4'>4</option>
-            <option value='5'>5 (Strongly Agree)</option>
-        </select>
-
-        <br><br>
-
-        <button type="button" class="btn btn-primary btn-lg btn-block" id='submit'>Submit</button>
-
-        <br><br>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h2 class="modal-title"><strong>Best Match</strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="match-name"></h2>
+          <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
 
     </div>
-
-</body>
-
-<script type='text/javascript'>
-    //convert the users results into an array of numbers
-    //compare the users scores to the friends scores
-
-    //capture question scores
-    var collectScores = [];
-
-    //capture the initial difference of the first friend
-    var initialDifferenceOne = [];
-
-    //capture the initial difference of the second friend
-    var initialDifferenceTwo = [];
-
-    //capture the initial difference of the third friend
-    var initialDifferenceThree = [];
-
-    //capture the initial difference of the fourth friend
-    var initialDifferenceFour = [];
-
-    var arr = [];
-
-    //capture the users information
-    var obj = {
-        name: '',
-        photo: '',
-        scores: collectScores
-    };
-
-    //capture user name input
-    var userName = $('#name');
-
-    //capture user photo link input
-    var userPhoto = $('#photo');
-
-    //applying each select element the attribute question-option
-    var selectOption = ($('select').attr('question-option', 'option'));
-
-    //when an option is selected the value will be captured inside the obj[scores] property
-    selectOption.on('click', function () {
-        if ($(this).val() !== 'Select an Option') {
-            console.log(($(this).val()));
-            obj['scores'].push($(this).val());
-            console.log(obj['scores']);
-
+  </div>
+      
+<script type="text/javascript">
+$( document ).ready(function() {
+  console.log( "ready!" );
+  var config = {
+    ".chosen-select": {},
+    ".chosen-select-deselect": {
+      allow_single_deselect: true
+    },
+    ".chosen-select-no-single": {
+      disable_search_threshold: 10
+    },
+    ".chosen-select-no-results": {
+      no_results_text: "Oops, nothing found!"
+    },
+    ".chosen-select-width": {
+      width: "95%"
+    }
+  };
+  for (var selector in config) {
+    $(selector).chosen(config[selector]);
+  }
+});
+  $("#submit").on("click", function(event) {
+    event.preventDefault();
+    function validateForm() {
+      var isValid = true;
+      $(".form-control").each(function() {
+        if ($(this).val() === "") {
+          isValid = false;
         }
-    });
-
-    //when the submit button is clicked the user name and user photo link inputs are grabbed and stored in obj
-    $('#submit').on('click', function () {
-        //print the user name input
-        console.log(userName.val());
-        //print the user photo input
-        console.log(userPhoto.val());
-        //obj name property set to the user name input
-        obj['name'] = userName.val();
-        //obj photo property set to the photo input
-        obj['photo'] = userPhoto.val();
-        //view the user information
-        console.log(obj);
-        
-
-        
-        $.post('/api/friends',obj,function(data){
-            //grabbing data from 
-            $('#name').text(data.userName);
-        })
-
-
-        //ajax call to import the friends data from friends.js
-        $.ajax({ url: 'api/friends', method: 'GET' })
-            .then(function (friends) {
-                for (var i = 0; i < friends[0]['scores'].length; i++) {
-                    initialDifferenceOne.push(Math.abs(friends[0]['scores'][i] - parseInt(obj['scores'][i])));
-                    initialDifferenceTwo.push(Math.abs(friends[1]['scores'][i] - parseInt(obj['scores'][i])));
-                    initialDifferenceThree.push(Math.abs(friends[2]['scores'][i] - parseInt(obj['scores'][i])));
-                    initialDifferenceFour.push(Math.abs(friends[3]['scores'][i] - parseInt(obj['scores'][i])));
-
-                };
-
-                //add each difference inside the initialDifference array
-                function totalDiff(total, num) {
-                    return total + num;
-                };
-
-                //display the total difference for between the user and each friend
-                console.log(initialDifferenceOne.reduce(totalDiff));
-                arr.push(initialDifferenceOne.reduce(totalDiff));
-
-                console.log(initialDifferenceTwo.reduce(totalDiff));
-                arr.push(initialDifferenceTwo.reduce(totalDiff));
-
-                console.log(initialDifferenceThree.reduce(totalDiff));
-                arr.push(initialDifferenceThree.reduce(totalDiff));
-
-                console.log(initialDifferenceFour.reduce(totalDiff));
-                arr.push(initialDifferenceFour.reduce(totalDiff));
-
-
-                console.log(Math.min(...arr));
-
-
-            });
-    })
-
+      });
+      $(".chosen-select").each(function() {
+        if ($(this).val() === "") {
+          isValid = false;
+        }
+      });
+      return isValid;
+    }
+    if (validateForm()) {
+      var userData = {
+        name: $("#name").val(),
+        photo: $("#photo").val(),
+        scores: [
+          $("#q1").val(),
+          $("#q2").val(),
+          $("#q3").val(),
+          $("#q4").val(),
+          $("#q5").val(),
+          $("#q6").val(),
+          $("#q7").val(),
+          $("#q8").val(),
+          $("#q9").val(),
+          $("#q10").val()
+        ]
+      };
+      console.log(parseInt($("#q1").val()))
+      
+      $.post("/api/friends", userData, function(data) {
+        $("#match-name").text(data.name);
+        $("#match-img").attr("src", data.photo);
+        $("#results-modal").modal("toggle");
+        console.log(data)
+      });
+    } else {
+      alert("Please fill out all fields before submitting!");
+    }
+  });
 </script>
-</html>
+      </body></html>

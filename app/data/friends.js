@@ -1,73 +1,56 @@
-var friends = [
+// These are dummy data's to show case who you match with.
+    
+var surveyArray = [
     {
-        "name": "Brian O Conner",
-        "photo": "https://www.filmibeat.com/img/2016/09/7n-paulwalkerdies00-20-1474364019.jpg",
-        "scores": [
-            1, 
-            3,
+        "name":"Sponge Bob",
+        "photo":"https://studybreaks.com/wp-content/uploads/2018/12/sb1.jpg",
+        "scores":[
             3,
             5,
-            3,
+            2,
             5,
+            1,
+            5,
+            1,
+            3,
+            4,
+            5
+          ]
+      },
+    {
+        "name":"Patrick Star",
+        "photo":"https://costumewall.com/wp-content/uploads/2017/10/patrick-star.jpg",
+        "scores":[
+            2,
+            2,
+            4,
+            1,
+            3,
             4,
             2,
+            3,
+            2,
+            5
+          ]
+      },
+    {
+        "name":"Squidward",
+        "photo":"https://static.tvtropes.org/pmwiki/pub/images/spongebob_squidward.jpg",
+        "scores":[
+            5,
+            3,
+            2,
+            3,
+            3,
+            1,
+            1,
+            3,
             5,
             5
-        ]
-    },
-
-    {
-        "name": "Dominic Toretto",
-        "photo": "https://fanfest.com/wp-content/uploads/2017/04/fast-furious-8-filming-cuba-vin-diesel.jpg",
-        "scores": [
-            1,
-            4,
-            5,
-            5,
-            1,
-            5,
-            1,
-            1,
-            1,
-            5
-        ]
-    },
-
-    {
-
-        "name": "Letty Ortiz",
-        "photo": "https://i.pinimg.com/originals/b4/10/a2/b410a200cd9b209e6183a3b64747c64d.jpg",
-        "scores": [
-            1,
-            2,
-            1,
-            3,
-            2,
-            5,
-            5,
-            5,
-            3,
-            5
-        ]
-    },
-
-    {
-        "name": "Mia Toretto",
-        "photo": "https://i.pinimg.com/originals/79/a4/e8/79a4e8b22ef323057e1321df9f80fc80.jpg",
-        "scores": [
-            3,
-            4,
-            4,
-            2,
-            5,
-            3,
-            2,
-            3,
-            3,
-            3
-        ]
-    }
-];
-
-
-module.exports = friends;
+          ]
+      },
+  ];
+  
+  // Note how we export the array. This makes it accessible to other files using require.
+  module.exports = surveyArray;
+  
