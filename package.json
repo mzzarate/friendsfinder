@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kimanikelly/Friend-Finder.git"
+    "url": "https://github.com/mzzarate/friendsfinder.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kimanikelly/Friend-Finder/issues"
+    "url": "https://github.com/mzzarate/friendsfinder/issues"
   },
-  "homepage": "https://github.com/kimanikelly/Friend-Finder#readme",
+  "homepage": "https://github.com/mzzarate/friendsfinder#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
